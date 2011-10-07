@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('csv_db', '1.0.1') do |p|
+Echoe.new('csv_db', '1.0.2') do |p|
   p.description    = "Backup a db table to a csv or push csv content to a database table"
   p.url            = "http://github.com/phongsi/csv_db"
   p.author         = "Phong Si"

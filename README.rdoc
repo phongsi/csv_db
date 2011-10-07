@@ -1,6 +1,6 @@
 = csv_db
 is a gem for rails apps that adds to rake db tasks. The command rake db:csv_to_db pushes csv content to a db table
-and the command rake db:db_to_csv pulls a db table into a csv
+and the command rake db:db_to_csv pulls a database table into a csv
 
 == Install
 gem install csv_db

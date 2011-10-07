@@ -1,6 +1,8 @@
+# code by Phong Si
 require 'csv'
 
 namespace :db do
+  desc "pulls database table into a csv file"
   task :db_to_csv => :environment do
     model_dir = Dir['**/models/**/*.rb'].detect {|f| ENV['model'] == File.basename(f, '.*').camelize}
     if !model_dir.eql?(nil)    
@@ -21,6 +23,8 @@ namespace :db do
       puts "Table #{ENV['model']} could not be found"
     end
   end
+
+  desc "pushes csv content into a database table"
   task :csv_to_db => :environment do
     model = ENV['csv'].constantize
     columns = Array.new
