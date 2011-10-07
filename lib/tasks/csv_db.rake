@@ -6,7 +6,7 @@ namespace :db do
     if !model_dir.eql?(nil)    
       table = File.basename(model_dir, '.*').camelize.constantize
       objects = table.all
-      CSV.open("./db/db_to_csv/#{table}.csv", "wb") do |csv|
+      CSV.open("#{table}.csv", "wb") do |csv|
         csv << table.column_names
         row = Array.new
         objects.each do |obj|
@@ -24,7 +24,7 @@ namespace :db do
   task :csv_to_db => :environment do
     model = ENV['csv'].constantize
     columns = Array.new
-    CSV.foreach("./db/csv_to_db/#{ENV['csv']}.csv", :headers => :first_row, :return_headers => true) do |row|
+    CSV.foreach("#{ENV['csv']}.csv", :headers => :first_row, :return_headers => true) do |row|
       if row.header_row?()
         columns = row
       else
