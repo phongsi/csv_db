@@ -10,12 +10,12 @@ If you have a table you want to backup into a csv in the rails db with a model: 
 
 just call: rake db:csv_to_db model=Model
 
-the call writes into a csv file Model.csv located in the db/csv_to_db directory
+the call writes into a csv file Model.csv located in the app root directory
 
 If you have a data you want to push from a csv in the rails db with a model: Model
 
 just call: rake db:db_to_csv csv=Model
 
-the call reads from a csv file Model.csv located in the db/db_to_csv directory
+the call reads from a csv file Model.csv located in the app root directory
 
 remember to place files in the right place. also primary keys cannot be written.

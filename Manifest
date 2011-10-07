@@ -2,5 +2,4 @@ Manifest
 README.rdoc
 Rakefile
 lib/csv_db.rb
-lib/csv_db/railtie.rb
 lib/tasks/csv_db.rake
